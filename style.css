@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing:content-box;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#displaybox{
+width:fit-content; 
+
+}
+
+.display{
+display: flex;
+justify-content: center;
+}
+
+.movieBox{
+    width: 250px;
+    height: 400px;
+    padding: 5px 15px;
+    float: left;
+    display: block;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    color: cornsilk;
+}
+
+.movieBox:hover,.movieBox:hover h3{
+    background-color:rgba(192,192,192,0.95);
+    border-radius: 15px;
+    color: rgb(14, 14, 14);
+    filter: drop-shadow(1px 2px 4px rgb(141, 3, 130));
+}
+
+img{
+    width: 200px;
+  
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 5px;
+    z-index: 200;
+    filter: drop-shadow(1px 2px 4px #3d3a3d);
+}
+
+button{
+    padding: 5px 15px;
+    border-radius: 20px;
+    border-color: rgb(61, 49, 57);
+    filter: drop-shadow(1px 2px 4px #3d3a3d);
+    background-image: linear-gradient(rgb(141, 3, 130), rgb(97, 90, 95));
+}
+
+button:hover{
+    background-image: linear-gradient(rgb(61, 49, 57), rgb(99, 6, 99));
+}
+
+h3 {
+    line-height: 30px;
+}
+
+p , h3{
+    color: #f7f7f7;
+    padding: 5px;
+}
+
+p{
+    width: 70vw;
+}
+
+@media screen and (max-width: 600px) {
+    .movieBox {
+     width: 80%;
+    }
+    #displaybox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        .nav{
+            width: 90%;
+        }
+  }
