@@ -37,11 +37,15 @@ justify-content: center;
     color: cornsilk;
 }
 
-.movieBox:hover,.movieBox:hover h3{
+.movieBox:hover{
     background-color:rgba(192,192,192,0.95);
     border-radius: 15px;
     color: rgb(14, 14, 14);
     filter: drop-shadow(1px 2px 4px rgb(141, 3, 130));
+}
+
+.movieBox:hover h3{
+    color: rgb(14, 14, 14);
 }
 
 img{

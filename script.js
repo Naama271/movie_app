@@ -13,7 +13,7 @@ const getMovies = async () => {
     })
     displayData(movieData.results)
   } catch (err) {
-    alert(err)
+    console.log(err.message)
   }
 }
 
@@ -41,11 +41,11 @@ const addToFav = async (movie_id) => {
     let reqData = await fetch(url)
     let movieData = await reqData.json()
     let findInFav = favArr.find((element) => element.id === movie_id)
-    if (typeof findInFav === 'undefined' || findInFav === null) {
+    if (!findInFav) {
       favArr.push(movieData)
     }
   } catch (err) {
-    alert(err)
+    console.log(err.message)
   }
 }
 
@@ -59,10 +59,10 @@ const getNowPlaying = async () => {
     results.sort((a, b) => (a.title > b.title ? 1 : b.title > a.title ? -1 : 0))
     displayData(results)
   } catch (err) {
-    alert(err)
+    console.log(err.message)
   }
 }
 
-const displayFav = () => {git
+const displayFav = () => {
   displayData(favArr)
 }
